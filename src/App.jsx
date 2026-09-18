@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function App() {
   const [student] = useState({
-    name: 'Alex',
+    name: 'Candice',
     stars: 145,
     level: 'Silver',
     progress: {
