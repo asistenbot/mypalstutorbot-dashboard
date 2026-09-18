@@ -3,15 +3,10 @@ import React, { useState } from 'react';
 export default function App() {
   const [student] = useState({
     name: 'Candice',
-    stars: 145,
-    level: 'Silver',
-    progress: {
-      'Fractions': { completed: 5, total: 20, score: 85, stars: 12 },
-      'Ratio': { completed: 3, total: 15, score: 78, stars: 9 },
-      'Photosynthesis': { completed: 2, total: 10, score: 90, stars: 14 },
-      'Grammar': { completed: 4, total: 20, score: 72, stars: 8 }
-    },
-    badges: ['First Steps', 'Math Master', 'Science Explorer']
+    stars: 0,
+    level: 'Bronze',
+    progress: { },
+    badges: []
   });
 
   const levels = {
