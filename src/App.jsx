@@ -11,7 +11,6 @@ export default function App() {
     const unsubscribe = onValue(studentsRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        // Single-student setup: show the first (only) student found under /students
         const first = Object.values(data)[0];
         setStudent({
           name: first.name || 'Student',
@@ -63,16 +62,13 @@ export default function App() {
     <div style={{ fontFamily: 'Arial, sans-serif', background: '#f5f7fa', minHeight: '100vh', padding: '20px' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
 
-        {/* Header */}
         <div style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white', padding: '30px', borderRadius: '10px', marginBottom: '30px' }}>
           <h1 style={{ margin: '0 0 10px 0', fontSize: '32px' }}>📚 My Pals Tutor Dashboard</h1>
           <p style={{ margin: 0, fontSize: '16px' }}>Welcome back, <strong>{student.name}</strong>!</p>
         </div>
 
-        {/* Stats Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '30px' }}>
 
-          {/* Stars */}
           <div style={{ background: 'white', padding: '20px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
             <h3 style={{ margin: '0 0 15px 0', color: '#333' }}>⭐ Your Stars</h3>
             <div style={{ fontSize: '48px', fontWeight: 'bold', color: '#FFD700', marginBottom: '10px' }}>{student.stars}</div>
@@ -81,14 +77,12 @@ export default function App() {
             </p>
           </div>
 
-          {/* Level */}
           <div style={{ background: 'white', padding: '20px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
             <h3 style={{ margin: '0 0 15px 0', color: '#333' }}>🏅 Current Level</h3>
             <div style={{ fontSize: '48px', marginBottom: '10px' }}>{currentLevelInfo.emoji}</div>
             <p style={{ margin: 0, fontSize: '20px', fontWeight: 'bold', color: '#667eea' }}>{student.level}</p>
           </div>
 
-          {/* Topics */}
           <div style={{ background: 'white', padding: '20px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
             <h3 style={{ margin: '0 0 15px 0', color: '#333' }}>📚 Topics Tried</h3>
             <div style={{ fontSize: '48px', fontWeight: 'bold', color: '#FF6B6B', marginBottom: '10px' }}>
@@ -98,7 +92,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Progress */}
         <div style={{ background: 'white', padding: '25px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', marginBottom: '30px' }}>
           <h2 style={{ margin: '0 0 20px 0', color: '#333' }}>📊 Progress by Topic</h2>
 
@@ -129,7 +122,6 @@ export default function App() {
           ))}
         </div>
 
-        {/* Badges */}
         <div style={{ background: 'white', padding: '25px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', marginBottom: '30px' }}>
           <h2 style={{ margin: '0 0 20px 0', color: '#333' }}>🎖️ Badges</h2>
 
@@ -154,7 +146,6 @@ export default function App() {
           )}
         </div>
 
-        {/* Level Progression */}
         <div style={{ background: 'white', padding: '25px', borderRadius: '10px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
           <h2 style={{ margin: '0 0 20px 0', color: '#333' }}>🚀 Level Progression</h2>
 
@@ -180,7 +171,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Footer */}
         <div style={{ textAlign: 'center', marginTop: '40px', color: '#999', fontSize: '12px' }}>
           <p>My Pals Tutor Bot © 2026 | Keep learning! 📚</p>
         </div>
